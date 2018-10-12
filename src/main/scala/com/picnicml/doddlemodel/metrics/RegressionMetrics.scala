@@ -4,6 +4,7 @@ import breeze.linalg._
 import breeze.numerics._
 import breeze.stats.variance
 import com.picnicml.doddlemodel.data.Target
+import com.picnicml.doddlemodel.norms.{RobustNorm, L2}
 
 object RegressionMetrics {
 
@@ -34,4 +35,5 @@ object RegressionMetrics {
 
     override def apply(y: Target, yPred: Target): Double = 1.0 - variance(y - yPred) / variance(y)
   }
+
 }
